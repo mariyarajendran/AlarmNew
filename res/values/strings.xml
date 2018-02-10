@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AlarmNew</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string-array name="kurals">
+        <item>Kural one demo first 1 11 1   1111</item>
+        <item>Kural one demo first 1 11 1   1111222222222</item>
+        <item>Kural one demo first 1 11 1   1111333333333333333</item>
+        <item>Kural one demo first 1 11 1   1111444444444444444</item>
+        <item>Kural one demo first 1 11 1   11115555555555555555</item>
+    </string-array>
+    <string-array name="porul">
+        <item>111111111 porul</item>
+        <item>222222222 porul</item>
+        <item>333333333 porul</item>
+        <item>444444444 porul</item>
+        <item>555555555 porul</item>
+    </string-array>
+
+    <string name="title_activity_mainnoti">Mainnoti</string>
+    <string name="title_activity_notificationview">Notificationview</string>
+    <string name="title_activity_sharelink">Sharelink</string>
+    <string name="title_activity_startpage">Startpage</string>
+
+</resources>

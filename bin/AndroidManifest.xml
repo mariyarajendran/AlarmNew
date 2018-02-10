@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alarmnew"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <!-- Permission to start Alarm on device reboot -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.alarmnew.AlarmNew"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.example.alarmnew.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <!-- Will not be called unless the application explicitly enables it -->
+        <receiver
+            android:name="com.example.alarmnew.DeviceBootReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.example.alarmnew.NotificationBarAlarm"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" />
+
+        <service
+            android:name="com.example.alarmnew.Startservice"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.example.alarmnew.Bootservice"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.example.alarmnew.Mainnoti"
+            android:label="@string/title_activity_mainnoti" >
+        </activity>
+        <activity
+            android:name="com.example.alarmnew.Notificationview"
+            android:label="@string/title_activity_notificationview" >
+        </activity>
+        <activity
+            android:name="com.example.alarmnew.Sharelink"
+            android:label="@string/title_activity_sharelink" >
+        </activity>
+        <activity
+            android:name="com.example.alarmnew.Startpage"
+            android:label="@string/title_activity_startpage" >
+        </activity>
+    </application>
+
+</manifest>
